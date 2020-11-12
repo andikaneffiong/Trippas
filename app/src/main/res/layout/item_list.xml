@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#F2F1F1">
+
+
+        <TextView
+            android:id="@+id/depature_rv"
+            android:layout_width="61dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Lagos"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/plane_image"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="184dp"
+            android:rotation="90"
+            android:src="@drawable/ic_baseline_airplane"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/depature_rv" />
+
+        <TextView
+            android:id="@+id/destination_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:text="@string/london"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/plane_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="@id/plane_image"
+            app:layout_constraintTop_toTopOf="@id/plane_image"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/departure_date_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mon, 23 2020"
+            app:layout_constraintEnd_toEndOf="@+id/depature_rv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/depature_rv"
+            app:layout_constraintTop_toBottomOf="@+id/depature_rv" />
+
+        <TextView
+            android:id="@+id/depature_time_rv"
+            android:layout_width="60dp"
+            android:layout_height="22dp"
+            android:text="12:24pm"
+            app:layout_constraintEnd_toEndOf="@+id/departure_date_rv"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="@+id/departure_date_rv"
+            app:layout_constraintTop_toBottomOf="@+id/departure_date_rv" />
+
+        <TextView
+            android:id="@+id/trip_type_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/btn_stroke_business"
+            android:padding="2dp"
+            android:text="Business"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/depature_time_rv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/depature_time_rv"
+            app:layout_constraintTop_toBottomOf="@+id/depature_time_rv" />
+
+        <ImageView
+            android:id="@+id/rv_menu"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/ic_baseline_vert"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="@+id/destination_time_rv"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/destination_time_rv"
+            app:layout_constraintTop_toTopOf="@+id/trip_type_rv" />
+
+        <TextView
+            android:id="@+id/destination_date_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Mon,24 2020"
+            app:layout_constraintEnd_toEndOf="@+id/destination_rv"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="@+id/destination_rv"
+            app:layout_constraintTop_toBottomOf="@+id/depature_rv" />
+
+        <TextView
+            android:id="@+id/destination_time_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:24pm"
+            app:layout_constraintEnd_toEndOf="@+id/destination_date_rv"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="@+id/destination_date_rv"
+            app:layout_constraintTop_toTopOf="@+id/depature_time_rv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

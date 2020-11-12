@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="427dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:title="Create Your  Trip" />
+
+
+
+    <EditText
+        android:id="@+id/depature_edtext"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Departure"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <EditText
+        android:id="@+id/destination_edtext"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Destination"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/depature_edtext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/depature_edtext"
+        app:layout_constraintTop_toBottomOf="@+id/depature_date_edtext" />
+
+    <EditText
+        android:id="@+id/depature_date_edtext"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="date"
+        android:focusable="false"
+        android:hint="Enter date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/depature_edtext"
+        app:layout_constraintTop_toBottomOf="@+id/depature_edtext" />
+
+    <EditText
+        android:id="@+id/depature_edTime"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:hint="@string/enter_time"
+        android:inputType="time"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/depature_date_edtext"
+        app:layout_constraintEnd_toEndOf="@+id/depature_edtext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/depature_date_edtext"
+        app:layout_constraintTop_toTopOf="@+id/depature_date_edtext" />
+
+    <EditText
+        android:id="@+id/destination_date_edtext"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="date"
+        android:focusable="false"
+        android:hint="@string/enter_date"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/depature_date_edtext"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/depature_date_edtext"
+        app:layout_constraintTop_toBottomOf="@+id/destination_edtext" />
+
+    <EditText
+        android:id="@+id/destination_time_edtext"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="time"
+        android:hint="@string/enter_time"
+        android:textSize="20sp"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/destination_date_edtext"
+        app:layout_constraintEnd_toEndOf="@+id/depature_edTime"
+        app:layout_constraintStart_toStartOf="@+id/depature_edTime"
+        app:layout_constraintTop_toTopOf="@+id/destination_date_edtext" />
+
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/add_trip"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/trip_type_selector"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/trip_type_selector"
+        app:layout_constraintTop_toBottomOf="@+id/trip_type_selector"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trip_type_selector"
+        android:layout_width="364dp"
+        android:layout_height="41dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destination_date_edtext">
+
+
+        <ImageView
+            android:id="@+id/menu_drop"
+            android:layout_width="57dp"
+            android:layout_height="46dp"
+            app:layout_constraintBottom_toBottomOf="@+id/trip_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+
+
+            app:layout_constraintStart_toEndOf="@+id/trip_type"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/btn_dropdown" />
+
+        <TextView
+            android:id="@+id/trip_type"
+            android:layout_width="284dp"
+            android:layout_height="45dp"
+
+            android:layout_marginStart="4dp"
+            android:ems="10"
+            android:hint="Trip type"
+            android:inputType="textPersonName"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
